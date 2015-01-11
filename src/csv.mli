@@ -86,7 +86,7 @@ val of_in_obj : ?separator:char -> ?excel_tricks:bool ->
     comma is used as a decimal separator, Excel will use [';'] as the
     separator.
 
-    @param excel_tricks enables Excel tricks, namely the fact that '"'
+    @param excel_tricks enables Excel tricks, namely the fact that '\"'
     followed by '0' in a quoted string means ASCII NULL and the fact
     that a field of the form ="..." only returns the string inside the
     quotes.  Default: [true].
@@ -111,7 +111,7 @@ val load : ?separator:char -> ?excel_tricks:bool-> string -> t
       where comma is used as a decimal separator, Excel will use [';']
       as the separator.
 
-      @param excel_tricks enables Excel tricks, namely the fact that '"'
+      @param excel_tricks enables Excel tricks, namely the fact that '\"'
       followed by '0' in a quoted string means ASCII NULL and the fact
       that a field of the form ="..." only returns the string inside the
       quotes.  Default: [true].  *)
@@ -186,7 +186,7 @@ val to_out_obj : ?separator:char -> ?excel_tricks:bool ->
       @param separator What character the separator is.  The default is [','].
 
       @param excel_tricks enables Excel tricks, namely the fact that
-      '\000' is represented as '"' followed by '0' and the fact that a
+      '\000' is represented as '\"' followed by '0' and the fact that a
       field with leading or trailing spaces or a leading '0' will be
       encoded as ="..."  (to avoid Excel "helping" you).  Default:
       [false].  *)
